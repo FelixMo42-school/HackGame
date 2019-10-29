@@ -3,7 +3,7 @@ import json
 import random
 
 class Player(socketio.ClientNamespace):
-    def __init__(self, username, password):
+    def __init__(self, username=input("enter username: "), password=input("enter password: ")):
         super().__init__("/2048")
 
         self.username = username
