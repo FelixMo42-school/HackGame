@@ -40,10 +40,11 @@ class Player(socketio.ClientNamespace):
             sio=socketio.Client(reconnection=False)
             sio.register_namespace(self)
 
-            sio.connect("http://localhost:1234", {
+            sio.connect("https://berkeley-hackclub-game.herokuapp.com", {
                 "username": self.username,
                 "password": self.password,
-            })
+                
+            }, ['websocket'])
 
             sio.wait()
         else:

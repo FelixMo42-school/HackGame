@@ -1,4 +1,5 @@
-from player import Player
+from Player import Player
+import random
 
 player = Player()
 
