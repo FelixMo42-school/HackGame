@@ -1,11 +1,11 @@
 from Player import Player
 import random
 
-player = Player(
-    username="admin",
-    password="12345",
-    url="http://localhost:3000/"
-)
+# Creates a new user to play the game.
+# It will automatically prompt you to enter your username and password.
+# Alternativly you can pass in the username and password.
+# If you dont have an account go to: https://berkeley-hackclub-game.herokuapp.com
+player = Player()
 
 # Register a callback that will be called when the game starts.
 @player.on("gameStart")
